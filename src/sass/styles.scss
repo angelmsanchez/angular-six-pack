@@ -1,0 +1,104 @@
+// src/sass/styles.scss
+// @import './variables';
+// @import './mixins';
+// @import './icons';
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Indie Flower', 'Poppins', 'Open Sans', cursive, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    margin: 0;
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  button,
+  html input[type='button'],
+  input[type='reset'],
+  input[type='submit'] {
+    cursor: pointer;
+  }
+  button,
+  select {
+    text-transform: none;
+  }
+  button {
+    overflow: visible;
+    padding: 0;
+    outline: 0;
+  }
+  input {
+    margin: 0;
+  }
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+  }
+  a {
+    color: #337ab7;
+    text-decoration: none;
+    background-color: transparent;
+    outline: 0;
+  }
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+  .material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+  }
+  .material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
