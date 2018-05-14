@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve --open",
     "build": "ng build --prod",
     "build:prod": "ng build --target --build-optimizer --vendor-chunk",
-    "test": "ng test",
+    "e2e": "ng e2e",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "ng": "ng",
+    "start": "ng serve --open",
+    "start:prod": "rm -r dist && ng build --prod && http-server dist --cors -o",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
