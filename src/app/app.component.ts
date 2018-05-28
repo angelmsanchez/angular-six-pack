@@ -8,7 +8,6 @@ import { CoreService } from './core/services/core.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Service Workers';
 
   constructor(
     private coreService: CoreService
