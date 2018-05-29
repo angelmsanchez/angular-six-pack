@@ -6,5 +6,9 @@ export const routes: Routes = [
     path: 'home',
     loadChildren: './home/home.module#HomeModule',
   },
+  {
+    path: 'tester',
+    loadChildren: './tester/tester.module#TesterModule',
+  },
   { path: '**', redirectTo: 'home' }
 ];

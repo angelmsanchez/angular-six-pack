@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
+import { HomeService } from './../../services/home.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +12,16 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   title = 'Service Workers';
 
-  constructor() {
-  }
+  constructor(
+    private homeService: HomeService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
-    console.log(' home component ');
+    this.homeService.getTest();
+  }
+
+  goTo(): void {
+    this.router.navigate(['tester']);
   }
 }

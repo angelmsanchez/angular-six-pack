@@ -12,12 +12,14 @@ import { routes } from './app-routing.module';
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-    RouterModule.forRoot(routes, {}),
-    CoreModule
+    RouterModule.forRoot(routes, {})
+    // CoreModule
   ],
   declarations: [
     AppComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
