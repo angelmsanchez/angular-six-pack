@@ -11,7 +11,7 @@ export class HomeService {
 
   constructor(
   ) {
-    console.log('init HomeService');
+    console.log('constructor homeservice');
   }
 
   getTest(): void {

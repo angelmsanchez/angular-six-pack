@@ -14,6 +14,6 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.coreService.getFlights());
+    this.coreService.getFlights();
   }
 }

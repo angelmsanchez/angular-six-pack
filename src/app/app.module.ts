@@ -5,7 +5,6 @@ import { RouterModule, PreloadAllModules } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
-import { CoreModule } from './core/core.module';
 import { routes } from './app-routing.module';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { routes } from './app-routing.module';
     BrowserModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     RouterModule.forRoot(routes, {})
-    // CoreModule
   ],
   declarations: [
     AppComponent

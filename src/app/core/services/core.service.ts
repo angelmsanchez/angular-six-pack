@@ -9,7 +9,7 @@ export class CoreService {
   constructor(
   ) { }
 
-  getFlights(): any {
+  getFlights(): void {
     console.log('getFlights');
   }
 }
