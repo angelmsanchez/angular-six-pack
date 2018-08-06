@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ElectronService } from 'ngx-electron';
 import { CoreService } from './core/services/core.service';
 
 @Component({
@@ -10,10 +11,15 @@ import { CoreService } from './core/services/core.service';
 export class AppComponent implements OnInit {
 
   constructor(
-    private coreService: CoreService
+    private coreService: CoreService,
+    private electronService: ElectronService
   ) { }
 
   ngOnInit(): void {
     this.coreService.getFlights();
+  }
+
+  openWindow() {
+    this.electronService.shell.openExternal('https://electronjs.org/');
   }
 }

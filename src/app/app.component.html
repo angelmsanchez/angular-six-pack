@@ -1,1 +1,3 @@
 <router-outlet></router-outlet>
+
+<button (click)="openWindow()" *ngIf="electronService.shell">Documentacion Electron</button>

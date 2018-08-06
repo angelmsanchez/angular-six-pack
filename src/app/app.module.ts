@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 
+import { NgxElectronModule } from 'ngx-electron';
+
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { routes } from './app-routing.module';
@@ -11,7 +13,8 @@ import { routes } from './app-routing.module';
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-    RouterModule.forRoot(routes, {})
+    RouterModule.forRoot(routes, {}),
+    NgxElectronModule
   ],
   declarations: [
     AppComponent
