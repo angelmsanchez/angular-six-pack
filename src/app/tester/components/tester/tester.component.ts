@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-tester',
@@ -7,15 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./tester.component.scss']
 })
 
-export class TesterComponent implements OnInit {
+export class TesterComponent {
 
   constructor(
     private router: Router
   ) { }
-
-  ngOnInit(): void {
-    console.log('tester component');
-  }
 
   goTo(): void {
     this.router.navigate(['home']);

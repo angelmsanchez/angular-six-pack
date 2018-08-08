@@ -13,7 +13,7 @@ import { routes } from './app-routing.module';
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-    RouterModule.forRoot(routes, {}),
+    RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
     NgxElectronModule
   ],
   declarations: [
