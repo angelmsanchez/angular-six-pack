@@ -15,6 +15,8 @@ import { CoreService } from './core/services/core.service';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
+  enabledButtonElectron: boolean;
+
   private scrollSubscription: Subscription;
 
   constructor(
@@ -27,6 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.coreService.getFlights();
     this.initSubscribeScrollPosition();
+    this.enabledButtonElectron = !!this.electronService.shell;
   }
 
   ngOnDestroy(): void {
