@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     this.homeService.getTest();
   }
 
-  goTo(): void {
-    this.router.navigate(['tester']);
+  goTo(route): void {
+    this.router.navigate([route]);
   }
 }

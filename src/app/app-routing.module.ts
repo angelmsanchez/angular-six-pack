@@ -10,5 +10,9 @@ export const routes: Routes = [
     path: 'tester',
     loadChildren: './tester/tester.module#TesterModule',
   },
+  {
+    path: 'comics',
+    loadChildren: './comic/comic.module#ComicModule',
+  },
   { path: '**', redirectTo: 'home' }
 ];

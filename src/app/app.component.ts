@@ -6,7 +6,6 @@ import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { ElectronService } from 'ngx-electron';
-import { CoreService } from './core/services/core.service';
 
 @Component({
   selector: 'app-root',
@@ -21,13 +20,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(
     private router: Router,
-    private coreService: CoreService,
     private electronService: ElectronService,
     private viewportScroller: ViewportScroller
   ) { }
 
   ngOnInit(): void {
-    this.coreService.getFlights();
     this.initSubscribeScrollPosition();
     this.enabledButtonElectron = !!this.electronService.shell;
   }
@@ -44,7 +41,7 @@ export class AppComponent implements OnInit, OnDestroy {
   private initSubscribeScrollPosition(): void {
     this.scrollSubscription = this.router.events.pipe(filter(e => e instanceof Scroll))
       .subscribe((e: any) => {
-        console.log('SCROLL: ', e);
+        // console.log('SCROLL: ', e);
         if (e.position) {
           this.viewportScroller.scrollToPosition(e.position);
         } else if (e.anchor) {
